@@ -1,0 +1,257 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.popup-container {
+  background: #292929;
+  color: white;
+  width: 460px; 
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Kumbh Sans", sans-serif;
+  gap:16px;
+}
+
+
+
+.popup-header {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  position: relative; 
+  padding: 4px 4px 8px 4px;
+  gap:6px;
+}
+
+.popup-header h3 {
+    color:#F6F6F6;
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.popup-header p.subtitle {
+  color: #AFAFAF; 
+  margin: 0;
+  
+  font-size: 14px;
+  font-weight:400;
+
+
+}
+
+.close-btn {
+  position: absolute;
+  top: 7px;
+  right: 16px;
+  background: transparent;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.close-icon {
+  width: 22px;
+  height: 22px;
+  filter: brightness(2); 
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.close-btn:hover .close-icon {
+    opacity: 1;
+}
+
+
+.popup-subcontainer{
+    display:flex;
+    flex-direction: column;
+    background: #00000066;
+    padding: 8px 8px 16px 8px;
+    border-radius:12px;
+    gap:12px;
+}
+
+.popup-tabs {
+  display: flex;
+  background: #292929; 
+  padding:2px;
+  border-radius: 8.91px;
+  border: 0.5px solid rgba(0, 0, 0, 0.04);
+  overflow: hidden; 
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: "Kumbh Sans", sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+
+.tab.active {
+  background:#111111;
+  font-family: "Kumbh Sans", sans-serif;
+  color: white;
+  border-radius:6.93px;
+  padding: 7px 16px;
+}
+
+
+
+.popup-body {
+  padding: 8px 8px;
+  
+  border-radius: 6px;
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.export-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+
+  
+}
+
+.export-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.export-title p {
+    font-weight: 400;
+    margin: 0;
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.zipped-tag {
+    width:40px;
+    height:18px;
+    background: #292929; 
+    color: #ffffff;
+    padding: 2px 11px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+/* --- Checkbox Group --- */
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 5px;
+    padding-left: 2px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    color: #c0c0c0;
+    line-height: 1.4;
+    user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.custom-checkbox {
+
+    height: 18px;
+    width: 18px;
+    box-sizing: border-box;
+    background-color: #333333; 
+    border-radius: 3px;
+    border: 1px solid #555; 
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #665DC0; 
+    border: none; 
+}
+
+
+.checkbox-label input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5px; 
+    height: 10px; 
+    border: solid white;
+    border-width: 0 2px 2px 0; 
+    transform: rotate(45deg) translate(-1px, -1px); 
+    left: 6px; 
+}
+
+
+/* --- Footer Section (Download Button) --- */
+
+.popup-footer {
+  text-align: center;
+}
+
+.download-btn {
+ 
+  min-width: 130px; 
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: linear-gradient(0deg, #333333 0%, #444444 100%);
+  border: none; 
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  color: #F6F6F6; 
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Nunito Sans", sans-serif;
+  
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.download-btn:hover {
+  background: linear-gradient(0deg, #444444 0%, #333333 100%); 
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+}
