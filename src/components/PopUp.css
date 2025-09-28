@@ -90,7 +90,7 @@
 .popup-tabs {
   display: flex;
   background: #292929; 
-  padding:2px;
+  padding:1px;
   border-radius: 8.91px;
   border: 0.5px solid rgba(0, 0, 0, 0.04);
   overflow: hidden; 
@@ -156,7 +156,7 @@
     height:18px;
     background: #292929; 
     color: #ffffff;
-    padding: 2px 11px;
+    padding: 3.5px 13px;
     border-radius: 100px;
     font-size: 12px;
     font-weight: 400;
